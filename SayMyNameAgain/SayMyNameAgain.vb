@@ -2,6 +2,7 @@
 'Spring 2025
 'RCET2265
 'OperatorsExample
+'https://github.com/JaceFoxman/SayMyNameAgain.git
 
 Module SayMyNameAgain
 
