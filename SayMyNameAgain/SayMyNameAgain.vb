@@ -5,7 +5,7 @@
 'https://github.com/JaceFoxman/SayMyNameAgain.git
 
 Option Explicit On
-
+Option Strict On
 
 Module SayMyNameAgain
 
@@ -13,25 +13,20 @@ Module SayMyNameAgain
 
         Dim userInput As String
 
-        Do
-            Console.Write("Please enter your name: ")
-            userInput = Console.Read()
+        Console.Write("Please enter your name: ")
+        userInput = Console.ReadLine()
 
-            Select Case userInput
+        If userInput = "Emily" Then
+            Console.WriteLine("Nice to see you Emily")
+        ElseIf userInput = "Joe" Then
+            Console.WriteLine("It's good to see you again, Joe")
+        ElseIf userInput = "Jason" Then
+            Console.WriteLine("Welocome back sir")
+        Else
+            Console.WriteLine($"Welcome, {userInput}")
+        End If
 
-                Case userInput = "Emily"
-                    Console.WriteLine($"Welcome, {userInput}")
-                Case userInput = "Joe"
-                    Console.WriteLine($"Welcome, {userInput}")
-                Case userInput = "Jason"
-                    Console.WriteLine($"Welcome back Sir.")
-
-            End Select
-
-        Loop Until = "Q"
-
-        Console.WriteLine($"have a nice day, {userInput}")
-
+        Console.WriteLine($"Goodbye, {userInput}")
     End Sub
 
 End Module
